@@ -22,5 +22,5 @@ dag = DAG(
 
 t1 = BashOperator(
     task_id='update_database',
-    bash_command='python /var/www/projects/trump_project/data/update_db.py',
+    bash_command='python3 /var/www/projects/trump_project/data/update_db.py',
     dag=dag)
