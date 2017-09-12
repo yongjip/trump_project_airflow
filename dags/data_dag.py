@@ -11,6 +11,7 @@ default_args = {
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
+    'catchup': False,
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
@@ -18,7 +19,7 @@ default_args = {
 }
 
 dag = DAG(
-    'update_database', default_args=default_args, schedule_interval=timedelta(minutes=5))
+    'update_database', default_args=default_args, schedule_interval=timedelta(minutes=10))
 
 t1 = BashOperator(
     task_id='update_database',
