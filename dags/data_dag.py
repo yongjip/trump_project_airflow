@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 default_args = {
     'owner': 'yongjip',
     'depends_on_past': False,
-    'start_date': datetime(2017, 9, 7),
+    'start_date': datetime(2017, 9, 12),
     'email': ['yongjip@sas.upenn.com'],
     'email_on_failure': False,
     'email_on_retry': False,
